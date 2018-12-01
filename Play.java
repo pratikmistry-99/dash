@@ -12,7 +12,7 @@ public class Play extends JFrame{
 		//frame = fr;/*
 		this.setPreferredSize(new Dimension(700,400));
 		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		panel.setBackground(Color.green);
+		panel.setBackground(Color.PINK);
 		
 	}
 	

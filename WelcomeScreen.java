@@ -28,7 +28,7 @@ public class WelcomeScreen extends JFrame{
                 panel.removeAll();
                 panel.repaint();                
                 //call playScreen class here
-                Play play = new PLay(panel);
+                Play play = new Play(panel);
             }
         });
         panel.add(btn,BorderLayout.SOUTH);

@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.util.*;
+import java.awt.event.*;
 
 public class WelcomeScreen extends JFrame{
 
@@ -18,7 +19,16 @@ public class WelcomeScreen extends JFrame{
 
         JButton btn = (new JButton("PLAY"));
         btn.setPreferredSize(new Dimension(2,4));
+        btn.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                panel.removeAll();
+                panel.repaint();                
+                //call playScreen class here
+            }
+        });
         panel.add(btn);
+
+
         this.pack();
         this.add(panel);
         this.setVisible(true);

@@ -6,10 +6,11 @@ import java.awt.event.*;
 public class WelcomeScreen extends JFrame{
 
     public WelcomeScreen() {
-        super("hello");
+        super("DASH!");
         this.setPreferredSize(new Dimension(700,400));
 
-        JPanel panel = new JPanel(new GridLayout(4,4,4,4));
+        JPanel panel = new JPanel(new FlowLayout());
+        panel.setBackground(Color.BLUE);
 
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         JLabel dash = (new JLabel("DASH!",SwingConstants.CENTER));
@@ -18,20 +19,25 @@ public class WelcomeScreen extends JFrame{
         panel.setVisible(true);
 
         JButton btn = (new JButton("PLAY"));
-        btn.setPreferredSize(new Dimension(2,4));
+        //btn.setBounds(10,10,10,10);
+        btn.setPreferredSize(new Dimension(100,50));
+        
+
         btn.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 panel.removeAll();
                 panel.repaint();                
                 //call playScreen class here
+                Play play = new PLay(panel);
             }
         });
-        panel.add(btn);
+        panel.add(btn,BorderLayout.SOUTH);
 
 
         this.pack();
         this.add(panel);
         this.setVisible(true);
+        this.setResizable(false);
 
 
 

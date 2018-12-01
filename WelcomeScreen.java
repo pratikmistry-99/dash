@@ -8,11 +8,15 @@ public class WelcomeScreen extends JFrame{
     public WelcomeScreen() {
         super("DASH!");
         this.setPreferredSize(new Dimension(700,400));
+        JLabel background;
+        ImageIcon bkg = new ImageIcon("bkg.jpg");
+        background = new JLabel("",bkg,JLabel.CENTER);
+        background.setBounds(0,0,700,400);
+        add(background);
 
         JPanel panel = new JPanel(new FlowLayout());
         panel.setBackground(Color.BLUE);
 
-        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         JLabel dash = (new JLabel("DASH!",SwingConstants.CENTER));
         dash.setFont(new Font("Courier",Font.BOLD,75));
         panel.add(dash);
@@ -33,6 +37,7 @@ public class WelcomeScreen extends JFrame{
         });
         panel.add(btn,BorderLayout.SOUTH);
 
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         this.pack();
         this.add(panel);
